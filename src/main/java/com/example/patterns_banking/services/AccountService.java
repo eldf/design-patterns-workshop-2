@@ -8,6 +8,7 @@ import com.example.patterns_banking.repositories.ICustomerRepository;
 import com.example.patterns_banking.services.commands.CreateAccountCommand;
 import com.example.patterns_banking.services.commands.DepositCommand;
 import com.example.patterns_banking.services.commands.ICommand;
+import com.example.patterns_banking.services.commands.SelectAccountCommand;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,4 +32,14 @@ public class AccountService {
     ICommand<Account> command = new DepositCommand(accountRepository, accountId, amount);
     return command.execute();
   }
+
+  public Account selectAccount() {
+    ICommand<Account> command = new SelectAccountCommand(accountRepository);
+    return command.execute();
+  }
+
+
+
+
+
 }

@@ -15,8 +15,12 @@ public class CheckingAccount extends Account{
   private static final double DEPOSIT_FEE_RATE = 0.01; // 1% of the amount
   private static final double WITHDRAWAL_FEE_RATE = 0.002; // 0.2% of the amount
 
+
+
   @Override
   public Double calculateDepositFee(Double amount) {
     return amount * DEPOSIT_FEE_RATE;
   }
+
+
 }

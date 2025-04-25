@@ -10,6 +10,7 @@ public class CheckingAccountFactory implements AccountFactory {
   @Override
   public Account createAccount(Customer customer, String accountNumber, Double balance) {
     CheckingAccount account = new CheckingAccount();
+
     account.setAccountNumber(accountNumber);
     account.setBalance(balance);
     account.setCustomer(customer);

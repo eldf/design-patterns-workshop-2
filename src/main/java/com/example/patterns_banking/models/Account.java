@@ -23,6 +23,8 @@ public abstract class Account {
 
   public abstract Double calculateDepositFee(Double amount);
 
+
+
   public void deposit(Double amount) {
     double fee = calculateDepositFee(amount);
     this.balance += amount - fee;
